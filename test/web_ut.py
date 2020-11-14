@@ -66,4 +66,5 @@ class ISelenium(unittest.TestCase):
         elem.send_keys(f'{search_keyword}{Keys.RETURN}')
         print(f'搜索关键词~{search_keyword}')
         # time.sleep(5)
+        print(f'{search_keyword}=={self.driver.title}')
         self.assertTrue(f'{search_keyword}' in self.driver.title, msg=f'{testcase_name}校验点 pass')
